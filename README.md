@@ -64,12 +64,12 @@ pip freeze > requirements.txt ==>개발에 썼던 프로그램 모두 다운
         + Web 서버 -> DB커넥션 -> ORM(객체화) -> ORM 사용 -> Web서버 결과 받기
 
 ### 카카오톡 나에게 톡보내기
- - 인증코드->"https://kauth.kakao.com/oauth/token"
+ - 인증코드->
  - 127.0.0.1:8000 / 
 
-  - https://kauth.kakao.com/oauth/authorize?client_id=6efd8b4fcb383addb3586c8fa6f477a3&redirect_uri=http://127.0.0.1:8000&response_type=code&scope=talk_message
+  - 
 
-  - 오류 시 : https://developers.kakao.com/docs/latest/ko/message/rest-api#default-template-msg-me
+  - 오류 시 : 
 
  ### 1. 카카오 API 용어
   - 인증 코드 : 1회성, 토큰(Access, Refresh)을 발급받기  위해 사용
