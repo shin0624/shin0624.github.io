@@ -3,7 +3,7 @@
 
 /* 공통사항 */
 * { box-sizing: border-box; }
-html, body { font-size: 62.5%; }
+html, body { font-size: 70.5%; }
 body {
 	font-family: 'Nanum Gothic', sans-serif;
 	display: flex;

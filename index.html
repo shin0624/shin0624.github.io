@@ -11,9 +11,47 @@
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" type="text/css" href="css/design.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <style>          
+        .card_box:hover {
+            transform: translateY(-7px);
+        }
+        .common_box:hover {
+            transform: translateY(-7px);
+        }
+
+        .OneLineIntroduce_Box:hover{
+            transform: translateY(-7px);
+        }
+
+        .card_left {
+            flex: 1;
+        }
+
+        .bar_fill {
+        height: 30px;
+        border-radius: 5px;
+        background: linear-gradient(90deg, rgba(166,115,255,1) 0%, rgb(10, 238, 200) 100%);
+        text-align: center;
+        padding-right: 5px;
+        color: white;
+        font-size: 15px;
+        line-height: 20px;
+        animation: fillAnimation 1.5s ease-in-out;
+        }
+    
+        @keyframes fillAnimation {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        </style>
 </head>
 <body>
     <div class="wrap">
+        
         <!-- 명함 -->
         <div class="common_box card_box">
             <div class="card_left">
@@ -58,7 +96,18 @@
             </div>
         </div>
         
-        
+        <div class="common_box OneLineIntroduce_Box">
+            <div class="middle">
+                <span class="job job_kr">■ Unity Engine과 주력 언어 C#을 사용하여 다운로드 수 10,000회 이상을 기록한 게임을 개발하고 출시한 경험이 있는 게임 개발자입니다.</span>
+                <span class="job job_kr">■ 인디게임 개발팀의 PM 및 메인 프로그래머로 활동하며, Steam과 Google PlayStore를 통한 게임 서비스를 주도하였습니다.</span>
+                <span class="job job_kr">■ Unity CustomEditor를 활용하여 개발에 필요한 툴을 직접 설계 및 구현하고 AssetStore에 출시하였습니다.</span>
+                <span class="job job_en">□ I am a game developer with experience in developing and launching games using C# and Unity Engine, achieving over 10,000 downloads.</span>
+                <span class="job job_en">□ As the PM and lead programmer of an indie game development team, I led the game service through Steam and Google PlayStore.</span>
+                <span class="job job_en">□ I designed and developed the necessary tools using Unity CustomEditor and released them on the Asset Store.</span>
+            </div>
+        </div>
+    
+     
         <div class="common_box info_box">
             <!-- Skill -->
             <div class="sub_box skill_box">
@@ -121,7 +170,7 @@
                     </div>
                     <div>
                         <span>조선대학교 컴퓨터공학과 [게임개발팀] 팀장 (2024.03 ~ 2025.02)</span>
-                        <span>광주광역시 인디게임 개발 지원사업 인디스타즈 9기 [Studio Chosun] 팀장 (2024.05 ~ 2024.09)</span>
+                        <span>인디게임 개발 지원사업 인디스타즈 9기 [Studio Chosun] 팀장 (2024.05 ~ 2024.09)</span>
                         <span>인디게임 개발팀 [IDEA FACTORY] 인게임 프로그래머 (2024.12 ~ )</span>
                     </div>
                 </div>
@@ -136,8 +185,8 @@
                         <span>+ </span>
                     </div>
                     <div>
-                        <span>Information Communication Engineering, Wonkwang University</span>
-                        <span>Computer Engineering, Chosun University</span>
+                        <span>조선대학교 컴퓨터공학과 (2023.03 ~ 2025.08)</span>
+                        <span>원광대학교 정보통신공학과 (2019.03 ~ 2023.02)</span>
                     </div>
                 </div>
             </div>
@@ -155,12 +204,12 @@
                         <span>+ </span>
                     </div>
                     <div>
-                        <span>3D 탈출 공포 [HERESIS], Unity <a href="https://store.steampowered.com/app/3374270/HERESIS/" style="color: red;">[Steam에서 보기]</a></span>
-                        <span>3D RPG [LoeGriA], Unity</span>
-                        <span>2D 모바일 전략 RPG [던전 키우기], Unity</span>
-                        <span>에디터 내 사운드리소스 검색기능 구현 [SoundCheckEditor], Unity</span>
-                        <span>Tag, Component 필터링 상속 자동화 구현 [InheritanceEditor], Unity</span>
-                        <span>가비지컬렉터 호출지점 가시화 및 비교기능 구현 [GC Visualizer], Unity</span>
+                        <span>한국의 무속신앙과 병원을 무대로 하는 3D 공포게임 <strong>[HERESIS]</strong> <a href="https://store.steampowered.com/app/3374270/HERESIS/" style="color: red;">[Steam에서 보기]</a></span>
+                        <span>파트너 종족과 함께 던전 타워를 정복하는 방치형 2D 모바일게임 <strong>[던전 키우기]</strong></span>
+                        <span>2개의 대륙에서 모험과 사냥을 즐기는 3D RPG <strong>[LoeGriA]</strong></span>
+                        <span>에디터 내 사운드리소스 검색기능 구현 <strong>[SoundCheckEditor]</strong></span>
+                        <span>Tag, Component 필터링 상속 자동화 구현 <strong>[InheritanceEditor]</strong></span>
+                        <span>가비지컬렉터 호출지점 가시화 및 비교기능 구현 <strong>[GC Visualizer]</strong></span>
                     </div>
                 </div>
             </div>

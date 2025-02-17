@@ -1,31 +1,33 @@
 .wrap {
-    max-width: 120rem;
-    min-width: 32rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 2.5rem 1rem;
-    gap: 1rem;
+    width: 100%;
+    max-width: 700px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(166,115,255,1);
 }
 .common_box {
     border-radius: 0.5rem;
     background-color: white;
     display: flex;
+    border-radius: 10px;
     overflow: hidden;
     margin-bottom: 2.5rem;
-    box-shadow: 0 0.4rem 1rem 0 rgba(0,0,0,0.2), 0 0.4rem 2rem 0 rgba(0,0,0,0.19);
+    box-shadow: 0px 4px 10px rgba(166,115,255,1);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* 명함 */
 .card_box {
-    width: 45rem;
-    padding: 3.5rem;
-    height: 25rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    position: relative;
-}
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(166,115,255,1);
+    transition: transform 0.3s ease-in-out;
+    }
 .card_job {
     display: flex;
     flex-direction: column;
@@ -33,7 +35,7 @@
     padding-top: 1.2rem;
 }
 .name_ko { font-size: 2.5rem; color: black; font-weight: bold;}
-.name_eng {font-size: 1.1rem; color: #a1a1a1;}
+.name_eng {font-size: 1.3rem; color: #a1a1a1;}
 .job {
     font-size: 1.6rem; 
     background: black;
@@ -44,8 +46,8 @@
     padding-bottom: 3rem;
 }
 .card_img {
-    width: 13rem;
-    height: 17rem;
+    width: 17rem;
+    height: 20rem;
     border-radius: 0.5rem;
     background-image: url("../image/abcde.jpg");
     background-repeat: no-repeat;
@@ -61,6 +63,7 @@
 .item_list > div {
     display: flex;
     flex-direction: column;
+
 }
 .item_list > div > span {
     padding-top: 0.8rem;
@@ -73,10 +76,46 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 0%;
     height: 1rem;
     background: linear-gradient(90deg, rgba(166,115,255,1) 0%, rgb(10, 238, 200) 100%);
+    
 }
+.OneLineIntroduce_Box {
+    background: #e8d7ff; /* 연한 보라색 배경 */
+    padding: 15px 20px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 800px; /* 최대 너비 설정 */
+    margin: 20px auto; /* 가운데 정렬 */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.OneLineIntroduce_Box .middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.job {
+    display: block;
+    font-size: 18px;
+    line-height: 1.1;
+    margin: 2px 0;
+}
+
+.job_kr {
+    font-weight: 600;
+    color: #333;
+}
+
+.job_en {
+    font-style: italic;
+    font-size: 15px;
+    color: #444;
+}
+
 
 
 
@@ -149,45 +188,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 스마트폰
 	##Device = Most of the Smartphones Mobiles (Portrait)
 	##Device = 대부분의 스마트폰 모바일 기기(세로)
@@ -201,6 +201,6 @@
         align-items: center;
     }
 	.wrap {transform: rotate(90deg);}
-    .sns_box, .info_box {display: none;}
+    
 	
 }
