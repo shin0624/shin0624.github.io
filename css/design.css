@@ -1,6 +1,13 @@
+body{
+    background-color: #ffffff;
+    
+    
+}
 .wrap {
     width: 100%;
     max-width: 700px;
+    height: 200%;
+    max-height: 3600px;
     background: #ffffff;
     padding: 20px;
     border-radius: 15px;
@@ -8,9 +15,9 @@
 }
 .common_box {
     border-radius: 0.5rem;
-    background-color: white;
+    background-color: #ffffff;
     display: flex;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
     margin-bottom: 2.5rem;
     box-shadow: 0px 4px 10px rgba(166,115,255,1);
@@ -85,10 +92,10 @@
     background: #e8d7ff; /* 연한 보라색 배경 */
     padding: 15px 20px;
     border-radius: 15px;
-    text-align: center;
+    text-align: left;
     max-width: 800px; /* 최대 너비 설정 */
     margin: 20px auto; /* 가운데 정렬 */
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(166,115,255,1);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -96,6 +103,41 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.OneLineIntroduce_Box_Text_kr{
+    display: block;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 18px 0;
+    font-weight: 600;
+    color: #333;
+}
+
+.OneLineIntroduce_Box_Text_eng{
+    display: block;
+    line-height: 1.7;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+    
+}
+
+.Portfolio_Box{
+    background-color: #6a5acd;
+    background-image: linear-gradient(319deg, #6a5acd 0%, #c54b8c 37%, #b284be 100%);
+    width: 100%;
+    max-width: 800px; /* 최대 너비는 58rem으로 제한 */
+    padding: 15px 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(166,115,255,1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center; /* 텍스트와 버튼을 세로 중앙 정렬 */
+    justify-content: space-between; /* 양쪽 정렬 */
+    transition: transform 0.3s ease-in-out;
 }
 
 .job {
@@ -116,6 +158,35 @@
     color: #444;
 }
 
+.Portfolio_Text{
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #ffffff;
+}
+.Portfolio_Button{
+    display: flex; /* 아이콘을 정렬하기 위해 flex 사용 */
+    align-items: center;
+    justify-content: center;
+    width: 4.5rem; /* 버튼 크기 줄임 */
+    height: 4.5rem;
+    background-color: #f1f1f1;
+    margin-left: 1rem;
+    border-radius: 50%; /* 원형 버튼 */
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.Portfolio_Button i{
+    line-height: 4.5rem;
+    font-size: 2rem;
+    transition: 0.2s linear;
+}
+.portfolio_Button:nth-child(1) {color :  rgba(166,115,255,1);}
+
+.spanText{
+    line-height: 1.4;
+}
 
 
 
@@ -129,9 +200,10 @@
 .sns_btn:nth-child(6) {color: #2F3138;}
 
 .sns_box {
-    width: 45rem;
+    width: 100%;
+    max-width: 58rem; /* 최대 너비는 58rem으로 제한 */
     padding: 1.5rem;
-
+    box-sizing: border-box;
 }
 .middle {
     width: 100%;
@@ -194,13 +266,11 @@
 	##Screen = 320px에서 768px 사이
 */
 @media (min-width: 320px) and (max-width: 768px) {
-	.html, body { font-size: 50%;}
+	.html, body { font-size: 500%;}
     body { 	
         width: 100vw;
-        height: 100vh;
-        align-items: center;
+        height: 150vh;
+        align-items: justify;
     }
-	.wrap {transform: rotate(90deg);}
-    
-	
+	.wrap {transform: rotate(0deg);}
 }
