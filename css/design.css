@@ -5,10 +5,10 @@ body{
 }
 .wrap {
     width: 100%;
-    max-width: 700px;
+    max-width: 960px;
     height: 200%;
     max-height: 3600px;
-    background: #ffffff;
+    background: #ffffffc3;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(166,115,255,1);
@@ -129,7 +129,7 @@ body{
     background-color: #6a5acd;
     background-image: linear-gradient(319deg, #6a5acd 0%, #c54b8c 37%, #b284be 100%);
     width: 100%;
-    max-width: 800px; /* 최대 너비는 58rem으로 제한 */
+    max-width: 960px; /* 최대 너비는 58rem으로 제한 */
     padding: 15px 20px;
     box-sizing: border-box;
     box-shadow: 0px 4px 10px rgba(166,115,255,1);
@@ -188,6 +188,79 @@ body{
     line-height: 1.4;
 }
 
+.PortfolioView_Box{
+    background-color: #6a5acd;
+    background-image: linear-gradient(319deg, #6a5acd 0%, #c54b8c 37%, #b284be 100%);
+    width: 100%;
+    max-width: 960px; /* 최대 너비는 58rem으로 제한 */
+    padding: 15px 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(166,115,255,1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center; /* 텍스트와 버튼을 세로 중앙 정렬 */
+    justify-content: space-between; /* 양쪽 정렬 */
+    margin: 0;
+    padding : 0;
+    transition: transform 0.3s ease-in-out;
+}
+/*아래 박스 추가*/
+.PortfolioView_Box_Container{
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    background-color: #ffffff;
+    padding : 20px;
+    border-radius: 15px;
+}
+.left_panel{
+    flex: 2;
+    background-color: #5c6670;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
+.divider {
+    width: 80%;
+    height: 3px;
+    background-color: white;
+    margin: 20px 0;
+}
+.right-panel {
+    flex: 1;
+    background-color: #5c6670;
+    padding: 20px;
+    border-radius: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: black;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.link-btn {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.link-btn:hover {
+    background-color: #ddd;
+}
 
 
 /* SNS */
@@ -201,7 +274,7 @@ body{
 
 .sns_box {
     width: 100%;
-    max-width: 58rem; /* 최대 너비는 58rem으로 제한 */
+    max-width: 960px; /* 최대 너비는 58rem으로 제한 */
     padding: 1.5rem;
     box-sizing: border-box;
 }
@@ -212,7 +285,9 @@ body{
     align-items: center;
 }
 .sns_btn {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 4.5rem;
     height: 4.5rem;
     background-color: #f1f1f1;
@@ -220,6 +295,7 @@ body{
     border-radius: 30%;
     overflow: hidden;
     position: relative;
+    padding:   3.0rem;
     text-align: center;
 }
 
@@ -271,6 +347,14 @@ body{
         width: 100vw;
         height: 150vh;
         align-items: justify;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .right-panel {
+        margin-left: 0;
+        margin-top: 20px;
     }
 	.wrap {transform: rotate(0deg);}
 }
