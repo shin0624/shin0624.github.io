@@ -205,6 +205,8 @@ body{
     padding : 0;
     transition: transform 0.3s ease-in-out;
 }
+
+
 /*아래 박스 추가*/
 .PortfolioView_Box_Container{
     display: flex;
