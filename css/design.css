@@ -58,6 +58,7 @@ body{
     height: 20rem;
     border-radius: 0.5rem;
     background-image: url("../image/abcde.jpg");
+    
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
