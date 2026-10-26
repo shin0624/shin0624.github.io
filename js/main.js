@@ -173,101 +173,103 @@
 
     var CATS = {
       core: { name: '중심',             color: '#4fd6ff' },
-      xr:   { name: 'XR · 실시간 3D',   color: '#2f8cff' },
-      ai:   { name: 'Vision AI',        color: '#4fd6ff' },
+      xr:   { name: '콘텐츠 개발',   color: '#2f8cff' },
+      ai:   { name: 'AI 개발',        color: '#4fd6ff' },
       dt:   { name: '디지털 트윈',       color: '#ffb04d' },
-      be:   { name: '백엔드 · 플랫폼',   color: '#a98bff' },
-      em:   { name: '임베디드 · 센싱',   color: '#4fe0b4' }
+      be:   { name: '백엔드 · 플랫폼',   color: '#a98bff' }
+      /* em:   { name: '임베디드 · 센싱',   color: '#4fe0b4' } */
     };
 
     var NODES = [
-      { id: 'me', label: '신범수', cat: 'core', r: 22, kind: 'root',
-        desc: '실시간 3D와 AI를 산업 문제에 붙이는 일을 합니다. 아래 다섯 갈래가 제가 계속 파고 있는 방향입니다.' },
+      { id: 'me', label: 'Shin Beom Su', cat: 'core', r: 22, kind: 'root',
+        desc: '3D, AI, 멀티모달, 산업 분야, 컨텐츠 개발에 관심이 있습니다.' },
 
       /* XR · 실시간 3D */
-      { id: 'xr',   label: 'XR · 실시간 3D', cat: 'xr', r: 15, kind: 'hub',
-        desc: '사람이 직접 들어가서 보고 만지는 3D 환경. 게임에서 시작해 산업 시뮬레이션으로 넓히고 있습니다.' },
-      { id: 'unity', label: 'Unity 6', cat: 'xr', r: 11,
-        desc: '주력 엔진. 게임, XR 시뮬레이션, 디지털 트윈 대시보드까지 모두 Unity로 만듭니다.' },
-      { id: 'hmd', label: 'HMD · Quest', cat: 'xr', r: 10,
-        desc: 'Meta Quest 2 기반 수술실 시뮬레이션과 다중 접속 동기화를 개발했습니다.' },
+      { id: 'xr',   label: '3D · XR', cat: 'xr', r: 15, kind: 'hub',
+        desc: '게임에서 시작하여 AI 기반 인터랙티브 콘텐츠, XR 시뮬레이션, 디지털 트윈으로 넓히고 있습니다.' },
+      { id: 'unity', label: 'Unity Engine', cat: 'xr', r: 11,
+        desc: '가장 자신있는 기술 스택입니다. 게임, 시뮬레이션, 디지털 트윈까지 모두 Unity로 만듭니다.' },
+      { id: 'hmd', label: 'XR', cat: 'xr', r: 10,
+        desc: 'Meta Quest 2 기반 수술실 시뮬레이션과 다중 접속 동기화를 개발하였습니다.' },
       { id: 'blender', label: 'Blender', cat: 'xr', r: 9,
-        desc: '씬에 들어갈 에셋을 직접 모델링합니다. 외주 없이 프로토타입까지 가는 속도가 목적입니다.' },
-      { id: 'game', label: '게임 개발', cat: 'xr', r: 10,
-        desc: '출시까지 가본 경험이 다른 모든 작업의 기준이 됩니다. Steam과 Google Play에 직접 올렸습니다.' },
+        desc: '사용할 에셋의 모델링, 리깅, 최적화에 사용합니다. 최근에는 Claude MCP를 통해 에셋 생성 자동화 시스템을 구축하고 있습니다.' },
+      { id: 'game', label: 'Image To 3D', cat: 'xr', r: 10,
+        desc: 'Meshy AI, TRELLIS, Hunyuan3D, VARCO 3D 등 에셋 생성 자동화 AI를 활발하게 사용 중입니다.' },
       { id: 'tool', label: 'Editor 도구', cat: 'xr', r: 9,
-        desc: '반복 작업이 보이면 CustomEditor 도구로 만듭니다. SoundCheckEditor는 Asset Store에 올렸습니다.' },
+        desc: '반복 작업이 보이면 CustomEditor 도구로 만듭니다. 사운드 에셋 탐색, 계층구조 설정 자동화 도구를 만들고 출시한 경험이 있습니다.' },
 
       /* Vision AI */
       { id: 'ai', label: 'Vision AI', cat: 'ai', r: 15, kind: 'hub',
-        desc: '영상에서 사람과 사물을 읽어내는 기술. 현장 데이터를 판단 가능한 숫자로 바꾸는 일입니다.' },
+        desc: '영상에서 사람과 사물을 읽어내는 기술은 산업 현장에서 가장 수요가 많았기에, 다양한 모델을 개발에 사용 중입니다. ' },
       { id: 'det', label: 'Object Detection', cat: 'ai', r: 11,
-        desc: 'RT-DETR v2, YOLO 계열로 작업자와 결함을 탐지합니다.' },
+        desc: '라이선스 이슈 방지가 필요한 상용 SW에는 주로 RT-DETR 계열을 사용하며, 비상업적 연구에는 YOLO 계열을 주로 사용합니다.' },
       { id: 'pose', label: 'Pose Estimation', cat: 'ai', r: 11,
-        desc: '관절 키포인트를 뽑아 작업자의 신체부하를 자동 평가하는 데 씁니다. 관련 논문으로 우수논문상을 받았습니다.' },
+        desc: '핸드 트래킹에는 주로 MediaPipe, 전신에 대한 고수준 추정 및 3D 아바타 개발 등에는 MoveNet 계열과 ViTPose를 주로 사용합니다.' },
       { id: 'seg', label: 'Segmentation', cat: 'ai', r: 10,
-        desc: 'DeepLabV3+로 결함의 픽셀 마스크를 그려 위치와 면적을 산정합니다.' },
+        desc: 'DeepLabV3+, Segformer 모델을 공공 데이터로 학습시켜 교량 이미지 내 결함의 픽셀 마스크를 그려 위치와 면적을 산정하는 기능을 Unity 내에서 구현하였습니다.' },
       { id: 'action', label: 'Action Segmentation', cat: 'ai', r: 10,
-        desc: '연속된 영상에서 작업 단위를 끊어내 공정 분석에 활용합니다.' },
-      { id: 'onnx', label: 'ONNX · Sentis', cat: 'ai', r: 10,
-        desc: '학습한 모델을 ONNX로 변환해 Unity 안에서 인프로세스로 돌립니다. 서버 없이 동작하는 게 장점입니다.' },
+        desc: '동영상의 특징 벡터를 추출하여 학습시킨 TCN 계열 모델을 사용하여 연속된 영상 내 공정 분석을 수행하는 기술을 개발하였습니다.' },
+      { id: 'onnx', label: 'Unity Sentis', cat: 'ai', r: 10,
+        desc: '학습한 AI 모델을 ONNX로 변환해 Unity 내에서 추론시키는 Sentis Worker를 구현하여, Unity라는 엔진 내에서도 AI 모델 활용성이 높음을 검증하였습니다.' },
       { id: 'autolabel', label: '라벨링 자동화', cat: 'ai', r: 9,
-        desc: 'Gemini와 gRPC, FFmpeg·OpenCV로 학습 데이터 구축을 자동화합니다.' },
+        desc: 'Ollama 클라이언트와 gRPC, FFmpeg·OpenCV 등을 통해 정형/비정형 학습 데이터 전처리를 자동화 하는 툴을 개발하였습니다. 이를 통해 데이터 전처리 외주에 비용을 들이지 않게 되었습니다.' },
 
       /* 디지털 트윈 */
       { id: 'dt', label: '디지털 트윈', cat: 'dt', r: 15, kind: 'hub',
-        desc: '현실 설비를 3D로 옮기고 실제 데이터를 흘려보내는 일. 제가 가장 재미있어하는 영역입니다.' },
-      { id: 'cesium', label: 'Cesium · GIS', cat: 'dt', r: 10,
-        desc: '실제 지형 위에 설비를 올립니다. 태양광 설비 가시화 솔루션에 사용했습니다.' },
+        desc: 'RGB · LiDAR 등을 사용하여 현실 설비를 3D로 옮기고 산업용 프로토콜로 데이터를 송수신 할 수 있습니다.' },
+      { id: 'cesium', label: 'GIS', cat: 'dt', r: 10,
+        desc: 'Cesium for Unity SDK를 사용하여 실제 국내 지형 위에 3D 설비 에셋를 얹거나, 공공 국토 데이터를 사용하여 대시보드 위에 클릭된 좌표의 도로명주소 정보를 표시할 수 있습니다. ' },
       { id: 'sim', label: '시뮬레이션', cat: 'dt', r: 10,
-        desc: '조건을 바꿔가며 결과를 미리 봅니다. 생산계획 스케줄링과 발전량 예측에 적용했습니다.' },
-      { id: 'mes', label: 'MES 연계', cat: 'dt', r: 10,
-        desc: 'MES와 DataLake를 붙여 현장 데이터가 분석까지 이어지도록 만듭니다.' },
-      { id: 'monitor', label: '설비 모니터링', cat: 'dt', r: 10,
-        desc: '실시간 상태를 대시보드로 보여줍니다. 교량 안전등급과 태양광 발전효율 모니터링을 만들었습니다.' },
+        desc: '현재 상태에서 조건을 바꿔가며 미래 데이터를 시뮬레이션 합니다. 정형 데이터의 시뮬레이션, 비정형 데이터의 시뮬레이션 모두 경험하였습니다.' },
+      { id: 'mes', label: '현장 설비 연계', cat: 'dt', r: 10,
+        desc: '산업 현장 MES, ERP, DataLake 등을 REST API로 연동하고, OPC UA, ModBus, MQTT, TCP 등으로 설비 데이터를 송수신/시각화 할 수 있습니다.' },
+      { id: 'monitor', label: '모니터링', cat: 'dt', r: 10,
+        desc: '실시간 상태의 시각화 및 사용자 I/O를 통한 데이터 송수신이 가능한 대시보드를 Blazor · Unity · TypeScript 등으로 개발하였습니다.' },
       { id: 'mlagents', label: 'ML-Agents', cat: 'dt', r: 9,
-        desc: '시뮬레이션 환경 안에서 에이전트를 학습시키는 방향을 보고 있습니다.' },
+        desc: 'Unity 기반 시뮬레이션 환경 안에서 3D 에이전트 객체를 강화학습 시키는 환경을 개발하였습니다. ' },
 
       /* 백엔드 · 플랫폼 */
       { id: 'be', label: '백엔드 · 플랫폼', cat: 'be', r: 15, kind: 'hub',
         desc: '클라이언트만으로는 끝나지 않습니다. 데이터를 받고 저장하고 내보내는 쪽도 직접 만듭니다.' },
-      { id: 'aspnet', label: 'ASP.NET Core', cat: 'be', r: 11,
-        desc: 'C# 하나로 클라이언트와 서버를 함께 가져갈 수 있는 점이 큽니다. Blazor와 EF Core를 함께 씁니다.' },
-      { id: 'pg', label: 'PostgreSQL', cat: 'be', r: 10,
-        desc: '과제 플랫폼의 주 저장소. 스키마 설계부터 쿼리 튜닝까지 맡습니다.' },
-      { id: 'proto', label: 'gRPC · MQTT', cat: 'be', r: 10,
-        desc: '서비스 간 통신과 센서 데이터 수집에 각각 사용합니다.' },
-      { id: 'cloud', label: 'Azure · Docker', cat: 'be', r: 9,
-        desc: '배포 환경을 컨테이너로 묶어 재현 가능하게 만드는 쪽을 공부하고 있습니다.' },
+      { id: 'aspnet', label: '.NET', cat: 'be', r: 11,
+        desc: 'C# 하나로 클라이언트와 서버를 함께 가져갈 수 있습니다. Blazor와 EF Core를 함께 사용하여 실제 현장에 적용하는 웹 앱을 개발하였습니다.' },
+      { id: 'pg', label: 'Database', cat: 'be', r: 10,
+        desc: '정형 데이터 뿐만 아니라 JSON, 배열, 시계열 등 다양한 데이터를 저장하고 꺼내 쓸 수 있습니다. 주로 PostgreSQL, SQLite, Firebase를 사용하며, MS-SQL, Influx DB 기반 시스템도 구축한 경험이 있습니다.' },
+      { id: 'proto', label: '산업용 프로토콜', cat: 'be', r: 10,
+        desc: '센서 데이터 수집, 설비 연동 등을 위한 OPC UA, ModBus, MQTT, TCP Socket 등 현장에서 주로 쓰이는 산업용 프로토콜 기반 개발이 가능합니다.' },
+      { id: 'cloud', label: '영상 데이터 처리', cat: 'be', r: 9,
+        desc: 'WebSocket, WebRTC, RTSP 등을 통해 영상 데이터를 웹 기반 SW에 실시간 송수신하는 기능을 개발하였습니다. 최근에는 4족보행 로봇의 카메라와 SW를 RTSP로 연결하고 gRPC로 고수준 제어를 수행하는 기술을 개발하고 있습니다.' }
 
       /* 임베디드 · 센싱 */
+      /*
       { id: 'em', label: '임베디드 · 센싱', cat: 'em', r: 15, kind: 'hub',
         desc: '데이터가 처음 만들어지는 지점. 센서를 직접 다뤄봐야 뒷단 설계가 달라집니다.' },
       { id: 'edge', label: 'Edge Device', cat: 'em', r: 10,
-        desc: '현장 기기에서 바로 수집하고 판단합니다. 신체 상황인지와 이상상태 판단 알고리즘을 개발했습니다.' },
+        desc: 'MCU에서 신체 상황인지와 이상상태 판단 알고리즘을 개발했습니다.' },
       { id: 'multi', label: '멀티모달 센싱', cat: 'em', r: 10,
-        desc: '서로 다른 종류의 신호를 묶어 하나의 상태로 읽어내는 작업입니다.' },
+        desc: '서로 다른 종류의 신호를 묶어 하나의 상태로 읽어내는 작업입니다. 주로 심박, 산소포화도, 3축 가속도 등 생체신호를 다루었습니다.' },
       { id: 'mocap', label: '모션캡쳐', cat: 'em', r: 10,
-        desc: 'Optitrack, XSENS MVN, Manus Glove를 운용해 3D Pose 데이터를 취득하고 Unity로 가져옵니다.' },
-      { id: 'arduino', label: 'C++ · Arduino', cat: 'em', r: 9,
-        desc: '펌웨어 레벨에서 센서를 붙이고 데이터를 꺼냅니다.' }
+        desc: 'Optitrack, XSENS MVN, Manus Glove를 운용해 3D Pose 데이터를 취득하고 Unity로 가져와 개발한 경험이 있습니다. 센서 HW 및 인프라 세팅이 가능하며, 직접 슈트를 입고 데이터를 생성하기도 합니다.' },
+      { id: 'arduino', label: 'nRF, DFU', cat: 'em', r: 9,
+        desc: 'OTA(On The Air) 기반 무선 펌웨어 업데이트 환경 구축이 가능합니다.' }
+      */
     ];
 
     var LINKS = [
       /* 중심 → 허브 */
-      ['me','xr'], ['me','ai'], ['me','dt'], ['me','be'], ['me','em'],
+      ['me','xr'], ['me','ai'], ['me','dt'], ['me','be'], /* ['me','em'], */
       /* 허브 → 잎 */
       ['xr','unity'], ['xr','hmd'], ['xr','blender'], ['xr','game'], ['xr','tool'],
       ['ai','det'], ['ai','pose'], ['ai','seg'], ['ai','action'], ['ai','onnx'], ['ai','autolabel'],
       ['dt','cesium'], ['dt','sim'], ['dt','mes'], ['dt','monitor'], ['dt','mlagents'],
       ['be','aspnet'], ['be','pg'], ['be','proto'], ['be','cloud'],
-      ['em','edge'], ['em','multi'], ['em','mocap'], ['em','arduino'],
+      /* ['em','edge'], ['em','multi'], ['em','mocap'], ['em','arduino'], */
       /* 분야를 가로지르는 연결 */
       ['unity','onnx'], ['unity','cesium'], ['unity','mlagents'], ['unity','game'],
       ['onnx','det'], ['onnx','seg'],
-      ['pose','mocap'], ['pose','monitor'],
+      /* ['pose','mocap'], */ ['pose','monitor'],
       ['hmd','sim'],
-      ['multi','monitor'], ['proto','monitor'], ['proto','edge'],
+      /* ['multi','monitor'], */ ['proto','monitor'], /* ['proto','edge'], */
       ['autolabel','proto'], ['mes','pg'], ['aspnet','sim'], ['tool','game']
     ];
 
